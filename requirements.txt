@@ -1,0 +1,12 @@
+# Esse arquivo contém todas as dependências do pyService.
+
+pika
+pandas
+pymongo
+matplotlib
+requests
+pyocclient
+openpyxl
+reportlab
+python-dotenv
+fpdf
