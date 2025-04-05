@@ -9,4 +9,10 @@ pyocclient
 openpyxl
 reportlab
 python-dotenv
-fpdf
+fpdf   
+pydantic
+pydantic-settings
+pydantic-redis
+pydantic-redis-settings
+pydantic-redis-settings
+

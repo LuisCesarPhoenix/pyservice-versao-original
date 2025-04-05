@@ -17,9 +17,10 @@ MONGO_COLLECTION = os.getenv("MONGO_COLLECTION")
 OWNCLOUD_URL = os.getenv("OWNCLOUD_URL")
 OWNCLOUD_USER = os.getenv("OWNCLOUD_USER")
 OWNCLOUD_PASS = os.getenv("OWNCLOUD_PASS")
-
+REMOTE_WORK_DIR = os.getenv("OWNCLOUD_WORK_DIR")
+REMOTE_FINALIZED_DIR = os.getenv("OWNCLOUD_FINAL_DIR")
 # Diretórios locais
-WORK_DIR = Path("work/")
+WORK_DIR =  Path("work/")
 FINALIZED_DIR = Path("finalizado/")
 
 # Validação básica (opcional, mas recomendado)
