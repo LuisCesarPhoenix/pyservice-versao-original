@@ -9,10 +9,12 @@ pyocclient
 openpyxl
 reportlab
 python-dotenv
-fpdf   
+fpdf
 pydantic
 pydantic-settings
 pydantic-redis
 pydantic-redis-settings
 pydantic-redis-settings
 
+# Instale as dependências na pasta do projeto: 
+# /mnt/c/users/cesar/pyService$ pip install -r requirements.txt
