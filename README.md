@@ -19,35 +19,40 @@ Link do roadmap: https://roadmap.sh/r/pymicroservice
 Diretórios e arquivos principais:
 
 pyService/
+├── .dockerignore
+├── .env                            # Arquivo de variáveis de ambiente
+├── .env                            # Arquivo exemplo de variáveis de ambiente
+├── .gitignore
+├── anotacoes_pyservice
 ├── docker-compose.yml              # Arquivo de configuração do Docker Compose
 ├── dockerfile                      # Dockerfile para containerização
-├── requirements.txt                # Dependências do Python
-├── .env                            # Arquivo de variáveis de ambiente
 ├── main.py                         # Arquivo principal do serviço
 ├── README.md                       # Documentação do projeto
-├── anotacoes_pyservice
+├── requirements.txt                # Dependências do Python
+├── arquivos-para-consulta/ 
 ├── src/
 │   ├── config/
-│   │   ├── settings.py             # Configuração das variáveis de ambiente
 │   │   ├── rabbitmq_config.py      # Configuração da conexão com RabbitMQ
+│   │   ├── settings.py             # Configuração das variáveis de ambiente
 │   ├── controllers/
 │   │   ├── rabbitmq_controller.py  # Processamento de mensagens da fila
-│   ├── services/
-│   │   ├── rabbitmq_consumer.py    # Consumidor do RabbitMQ que escuta a fila
-│   │   ├── file_service.py         # Lógica de higienização e enriquecimento de dados
-│   │   ├── report_service.py       # Geração de relatórios PDF e dashboards
+│   ├── models/
+│   │   ├── data_schema.py          # Estrutura dos dados para enriquecimento
 │   ├── routes/
+│   ├── services/
+│   │   ├── file_service.py         # Lógica de higienização e enriquecimento de dados
+│   │   ├── rabbitmq_consumer.py    # Consumidor do RabbitMQ que escuta a fila
+│   │   ├── report_service.py       # Geração de relatórios PDF e dashboards
+│   ├── tests/
+│   │   ├── send_test_message.py
 │   ├── utils/
 │   │   ├── rabbitmq_utils.py             # Envio e recebimento de mensagens do RabbitMQ
 │   │   ├── owncloud_utils.py             # Conexão e manipulação de arquivos no OwnCloud
 │   │   ├── mongo_utils.py                # Conexão e consultas ao MongoDB
-│   ├── models/
-│   │   ├── data_schema.py          # Estrutura dos dados para enriquecimento
 ├── storage/                        # Diretório para armazenar arquivos temporários e processados
 │   ├── work/                       # Arquivos aguardando processamento
 │   ├── finalizado/                 # Arquivos processados
-└── arquivos/     
-
+├──
 
 2. Como Tudo se Conecta?
 
@@ -113,6 +118,7 @@ services:
       - pyservice_default
     volumes:
       - pyservice_data:/app/data  # Volume persistente para dados do pyservice
+      - .:/app  # <<<<<< ISSO MONTA SEU CÓDIGO LOCAL TODO DENTRO DO CONTAINER
 
   redis:
     image: "redis:latest"
@@ -129,10 +135,12 @@ services:
 
 volumes:
   pyservice_data:
+    # Define um volume chamado pyservice_data, usado para armazenar dados persistentes do pyservice.
 
 networks:
   pyservice_default:
     external: true
+    # Usa a rede externa pyservice_default para permitir a comunicação com RabbitMQ, MongoDB, etc.
 
 5.2 Criando e Subindo os Containers
 a)Execute:
