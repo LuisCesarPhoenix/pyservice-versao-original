@@ -12,13 +12,13 @@ pyService/
 ├── .env                            # Arquivo de variáveis de ambiente
 ├── .env.example.env                # Arquivo exemplo de variáveis de ambiente
 ├── .gitignore                      # Informar ao Git quais arquivos ou diretórios devem ser ignorados (como .env, por exemplo)
-├── anotacoes_pyservice				# Contém anotações do desenvolvedor com ideias, rascunhos, fluxos de trabalho e observações
+├── anotacoes_pyservice				      # Contém anotações do desenvolvedor com ideias, rascunhos, fluxos de trabalho e observações
 ├── docker-compose.yml              # Arquivo de configuração do Docker Compose
 ├── dockerfile                      # Dockerfile para containerização
 ├── main.py                         # Arquivo principal do serviço
 ├── README.md                       # Documentação do projeto
 ├── requirements.txt                # Dependências do Python
-├── arquivos-para-consulta/ 		# Armazenar arquivos de referência, templates ou modelos para enriquecimento/higienização
+├── arquivos-para-consulta/ 		    # Armazenar arquivos de referência, templates ou modelos para enriquecimento/higienização
 ├── src/
 │   ├── config/
 │   │   ├── rabbitmq_config.py      # Configuração da conexão com RabbitMQ
@@ -33,7 +33,7 @@ pyService/
 │   │   ├── rabbitmq_consumer.py    # Consumidor do RabbitMQ que escuta a fila
 │   │   ├── report_service.py       # Geração de relatórios PDF e dashboards
 │   ├── tests/
-│   │   ├── send_test_message.py 	# Enviar mensagens simuladas para a fila RabbitMQ (teste de integração)
+│   │   ├── send_test_message.py 	  # Enviar mensagens simuladas para a fila RabbitMQ (teste de integração)
 │   ├── utils/
 │   │   ├── rabbitmq_utils.py       # Envio e recebimento de mensagens do RabbitMQ
 │   │   ├── owncloud_utils.py       # Conexão e manipulação de arquivos no OwnCloud
@@ -321,7 +321,7 @@ CMD ["python", "main.py"]
 4.3 Criando e Subindo os Containers
 a)Execute:
 i)docker network create pyservice_default  # Cria a rede necessária
-ii)docker-compose up -d                     # Sobe os containers em segundo plano
+ii)docker-compose up -d                    # Sobe os containers em segundo plano
 
 b)Para verificar os logs:
 docker logs -f pyservice
