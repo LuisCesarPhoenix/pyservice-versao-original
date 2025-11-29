@@ -6,6 +6,7 @@
 ### Diretórios e arquivos principais:
 A seguinte estrutura de diretórios e arquivos compõe o projeto pyService:
 
+```text
 pyService/  
 ├── .dockerignore                 <-- Evita que arquivos desnecessários sejam enviados para o contexto da imagem  
 ├── .env                          <-- Arquivo de variáveis de ambiente  
@@ -40,7 +41,7 @@ pyService/
 ├── storage/                      <-- Diretório para armazenar arquivos temporários e processados  
 │   ├── work/                     <-- Arquivos aguardando processamento  
 │   ├── finalizado/               <-- Arquivos processados  
-  
+```
 ## 🧭 Fluxo Completo:
 
 1.	🌐 API (Node.js):  
