@@ -29,7 +29,7 @@ c) Abra o terminal integrado do VS Code (Visualizar > Terminal > New terminal ou
 d) No terminal, execute o seguinte comando para inicializar um repositório Git dentro do repositório local do seu projeto:
 - git init<br/>
 e) dê os seguintes comandos no git:
-- config --global user.email "cesarrodriguesgoncalves@hotmail.com" (substitua pelo seu email)
+- git config --global user.email "cesarrodriguesgoncalves@hotmail.com" (substitua pelo seu email)
 - git config --global user.name "LuisCesarPhoenix" (substitua pelo seu nome de usuário)
 
 Observação:
