@@ -46,3 +46,6 @@ pyservice-main.zip
 
 # estudos_github_github
 /estudos_github_github/anotacoes.txt
+
+# Node.js dependencies
+/package-lock.json
