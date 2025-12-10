@@ -438,3 +438,21 @@ Para separar commits, use sempre soft ou normal (sem opção).
 ```text
 ****************************************************************************************************************************
 ```
+
+### COMO RENOMEAR UMA BRANCH
+
+1) Você precisa renomaear a branch no github, caso seja necessário pode setar ela como default:
+- dentro do repositório do projeto clique em view all branches
+- depois clique nos 3 pontinhos ao lado da branch e rename branch
+- exemplo: mudar de master para main
+
+
+2) No VS Code abra o git bash com ctrl + j e rode o comando dentro da pasta raiz do projeto:
+- git branch -m master main
+- git fetch origin
+- git branch -u origin/main main
+- git remote set-head origin -a
+
+```text
+****************************************************************************************************************************
+```
