@@ -221,7 +221,7 @@ facilitar a integração com o GitHub.
 ### 1. Fazer o Fork no GitHub (pelo navegador):
 
 A) Acesse o repositório no GitHub:
-- Abra o navegador e vá para o repositório que você deseja fazer o fork.
+- Abra o navegador e vá para o repositório pai que você deseja fazer o fork.
 B) Clique no botão "Fork":
 - No canto direito superior da página do repositório, clique no botão "Fork".
 - Selecione a sua conta do GitHub onde o fork será criado.
@@ -261,6 +261,9 @@ B) Se não quiser revisar as mudanças antes de aplicar, pode usar:
 - git remote add upstream https://github.com/REPO-ORIGINAL.git
 - git pull upstream main
 - Isso trará todas as novas alterações do repositório original para o seu fork local.
+- Sempre rodar o comando "npm install" depois que fizer um pull
+C) Ou então na página do repositório do seu fork clique no seguinte botão:
+- Sync fork
 
 ### 4. Agora você pode trabalhar no projeto
 
